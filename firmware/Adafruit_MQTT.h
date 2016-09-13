@@ -22,14 +22,14 @@
 #ifndef _ADAFRUIT_MQTT_H_
 #define _ADAFRUIT_MQTT_H_
 
-#if defined(ARDUINO)
-#include "Arduino.h"
-#define FLASH_STRING __FlashStringHelper
-#elif defined(SPARK)
-#include "application.h"
-// For some reason on the particle __FlashStringHelper and the macro F do not do the same as they do on ardiuno.
-// More over they do not build when used together as they should be.
-#define FLASH_STRING char
+#if defined(SPARK)
+	#include "application.h"
+	// For some reason on the particle __FlashStringHelper and the macro F do not do the same as they do on ardiuno.
+	// More over they do not build when used together as they should be.
+	#define FLASH_STRING char
+#elif defined(ARDUINO)
+	#include "Arduino.h"
+	#define FLASH_STRING __FlashStringHelper
 #endif
 
 #if defined(ARDUINO_SAMD_ZERO) || defined(ARDUINO_STM32_FEATHER) || defined(SPARK)
