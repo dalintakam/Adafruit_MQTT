@@ -1,8 +1,5 @@
-// This #include statement was automatically added by the Particle IDE.
-#include "Adafruit_MQTT_SPARK.h"
-
-// This #include statement was automatically added by the Particle IDE.
-#include "Adafruit_MQTT.h"
+#include "Adafruit_MQTT/Adafruit_MQTT_SPARK.h"
+#include "Adafruit_MQTT/Adafruit_MQTT.h"
 
 /************************* Adafruit.io Setup *********************************/
 
